@@ -16,8 +16,9 @@
 			<div class="modal-content">
 				<div class="modal-body">
 					<h2>Add new student</h2>
+					<div class="mess"></div>
 					<hr>
-					<form action="">
+					<form id="add_student_form" action="" method="POST" enctype="multipart/form-data">
 						<div class="form-group">
 							<label for="">Name</label>
 							<input class="form-control" name="name" type="text">
@@ -88,6 +89,7 @@
 		<a id="student_show" class="btn btn-primary btn-sm" href="#">Add new student</a>
 		<div class="card shadow">
 			<div class="card-body">
+				<div class="mess_all"></div>
 				<h2>All Students</h2>
 				<table class="table table-striped">
 					<thead>
