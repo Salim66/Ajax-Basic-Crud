@@ -43,6 +43,7 @@
 						$('form#add_student_form')[0].reset();
 						$('#add_new_student_modal').modal('hide');
 						$('.mess_all').html(data);
+						allStudentData();
 						// $('.mess').html(data);
 					}
 				});
@@ -52,6 +53,21 @@
 
 		});
 
+
+		// show all student data
+
+		function allStudentData(){
+			$.ajax({
+
+				url : 'inc/ajax/show_all.php',
+				success : function(data){
+					$("tbody#show_all_student").html(data);
+				} 
+
+			});
+		}
+
+		allStudentData();
 
 
 
