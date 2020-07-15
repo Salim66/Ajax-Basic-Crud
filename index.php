@@ -53,30 +53,23 @@
 					<h2>Single Student Data</h2>
 					<hr>
 					
-					<img class="shadow" style="width: 200px;height: 200px;display: block;margin: auto;border-radius: 50%;border: 10px solid #fff;" src="assets/media/img/photo-1470129360498-ab39dc4e05d6.webp" alt="">
-					<h2 class="text-center">Salim Hasan Riad</h2>
+					<img id="single_student_img" class="shadow" style="width: 200px;height: 200px;display: block;margin: auto;border-radius: 50%;border: 10px solid #fff;" src="" alt="">
+					<h2 id="student_name" class="text-center"></h2>
 
 					<table class="table table-striped table-hover">
 						<tr>
 							<td>Name :</td>
-							<td>Salim Hasan</td>
+							<td id="student_name"></td>
 						</tr>
 						<tr>
-							<td>Name :</td>
-							<td>Salim Hasan</td>
+							<td>Email :</td>
+							<td id="student_email"></td>
 						</tr>
 						<tr>
-							<td>Name :</td>
-							<td>Salim Hasan</td>
+							<td>Cell :</td>
+							<td id="student_cell"></td>
 						</tr>
-						<tr>
-							<td>Name :</td>
-							<td>Salim Hasan</td>
-						</tr>
-						<tr>
-							<td>Name :</td>
-							<td>Salim Hasan</td>
-						</tr>
+						
 					</table>
 
 				</div>
