@@ -8,12 +8,12 @@
 	include_once '../../apps/function.php';
 
 	// get value 
-	$id = $_POST['student_id'];
+	echo $id = $_POST['student_id'];
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$cell = $_POST['cell'];
 
-	if ( isset($_FILES['new_photo']['name']) ) {
+	if ( !empty($_FILES['new_photo']['name']) ) {
 		$data = fileUpload($_FILES['new_photo'], '../../media/students/');
 		$photo_name = $data['file_name'];
 
