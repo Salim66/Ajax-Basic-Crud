@@ -131,6 +131,59 @@
 		});
 
 
+		// Update student data
+		$(document).on('click','a#edit_student', function(e){
+			e.preventDefault();
+
+			let edit_id = $(this).attr('student_id');
+
+			$.ajax({
+				url : 'inc/ajax/edit_student.php',
+				data: { id : edit_id },
+				method : "POST",
+				success : function(data){
+
+					// json string to object covert
+					let edit_data = JSON.parse(data);
+
+
+					$('#update_student_modal input[name="name"]').val(edit_data.name);
+					$('#update_student_modal input[name="student_id"]').val(edit_data.id);
+					$('#update_student_modal input[name="email"]').val(edit_data.email);
+					$('#update_student_modal input[name="cell"]').val(edit_data.cell);
+					$('#update_student_modal input[name="old_photo"]').val(edit_data.photo);
+					$('#update_student_modal img').attr('src', 'media/students/' + edit_data.photo);
+				}
+			});
+
+			$('#update_student_modal').modal('show');
+
+		});
+
+
+
+		// Update form data
+		$(document).on('submit','form#update_student_form', function(e){
+			e.preventDefault();
+
+			$.ajax({
+				url : 'inc/ajax/update_student.php',
+				data : new FormData(this),
+				contentType : false,
+				processData : false,
+				method : "POST",
+				success : function(data){
+
+					$('#update_student_modal').modal('hide');
+
+					$('.mess_all').html('<p class="alert alert-success">Student data updated successfull ! <button class="close" data-dismiss="alert">&times;</button></p>');
+					allStudentData();
+					
+				}
+			});
+
+		});
+
 
 
 

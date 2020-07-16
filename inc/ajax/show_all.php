@@ -24,7 +24,7 @@
  	<td><img src="media/students/<?php echo $studnet_data['photo']; ?>" alt=""></td>
  	<td>
  		<a id="single_student_show" student_id="<?php echo $studnet_data['id']; ?>" class="btn btn-sm btn-info" href="#">View</a>
- 		<a class="btn btn-sm btn-warning" href="#">Edit</a>
+ 		<a id="edit_student" student_id="<?php echo $studnet_data['id']; ?>" class="btn btn-sm btn-warning" href="#">Edit</a>
  		<a id="delete_student" student_id="<?php echo $studnet_data['id']; ?>" class="btn btn-sm btn-danger" href="#">Delete</a>
  	</td>
  </tr>
